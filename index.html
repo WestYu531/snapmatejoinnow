@@ -122,23 +122,24 @@
 </section>
 
 <!-- 滑块部分 -->
-<section style="font-family: 'Inter', sans-serif;" class="py-12 sm:py-16 bg-white">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center" data-aos="fade-up">
-    <p class="text-3xl sm:text-4xl md:text-5xl text-[#1F323B] font-bold-inter mb-4">
+<section style="font-family: 'Inter', sans-serif;" class="py-12 sm:py-16 bg-white w-full overflow-hidden">
+  <div class="max-w-4xl mx-auto px-4" data-aos="fade-up">
+    <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1F323B] font-bold mb-4 break-words">
       You could earn 
-      <span id="earn-value" class="font-bold text-4xl sm:text-5xl md:text-7xl text-orange-500">$300</span>
-      <span class="font-bold text-4xl sm:text-5xl md:text-7xl text-orange-500">/month</span><br>
+      <span id="earn-value" class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-orange-500">$300</span>
+      <span class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-orange-500">/month</span><br>
       in your free time!
     </p>
 
-    <div class="mb-6">
-      <label for="hours-slider" class="block mb-2 text-[#1F323B]">
+    <div class="mb-6 w-full">
+      <label for="hours-slider" class="block mb-2 text-[#1F323B] text-sm sm:text-base">
         Based on working <span id="hours-value" class="font-semibold">24</span> hours/month ($50/hour)
       </label>
-      <input id="hours-slider" type="range" min="1" max="160" value="24" step="1" class="w-full h-2 bg-orange-200 rounded-lg appearance-none cursor-pointer">
+      <input id="hours-slider" type="range" min="1" max="160" value="24" step="1" 
+             class="w-full h-2 bg-orange-200 rounded-lg appearance-none cursor-pointer">
     </div>
 
-    <p class="mt-10 text-lg text-[#1F323B]">
+    <p class="mt-10 text-base sm:text-lg text-[#1F323B] break-words">
       SnapMate is built for <span class="font-semibold">photography enthusiasts of all levels</span>, whether you shoot with a smartphone, DSLR, film, or instant camera.
       We believe in <span class="font-bold">your skill—not your gear.</span>
     </p>
@@ -146,30 +147,30 @@
 </section>
 
 <!-- paying models-->
-<section class="pt-4 pb-16 bg-white">
-  <div class="max-w-5xl mx-auto px-6">
+<section class="pt-4 pb-16 bg-white w-full overflow-hidden">
+  <div class="max-w-5xl mx-auto px-4">
     <!-- 标题部分 -->
-    <h2 style="font-family: 'Inter', sans-serif;" class="text-6xl font-semibold-inter text-[#1F323B] text-center mb-6">Earning Models – You Choose</h2>
-    <p style="font-family: 'Inter', sans-serif;" class="text-center text-lg text-[#1F323B] mb-12 max-w-2xl mx-auto">
+    <h2 style="font-family: 'Inter', sans-serif;" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1F323B] text-center mb-4">Earning Models – You Choose</h2>
+    <p style="font-family: 'Inter', sans-serif;" class="text-center text-base sm:text-lg text-[#1F323B] mb-8 sm:mb-12 max-w-2xl mx-auto">
       You can offer one or both models—your profile shows your availability and pricing.
     </p>
 
     <!-- 模型分列部分 -->
-    <div style="font-family: 'Inter', sans-serif;" class="grid md:grid-cols-2 gap-10">
+    <div style="font-family: 'Inter', sans-serif;" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
       <!-- 模式 1：Hourly Rate -->
-      <div class="border border-orange-200 p-6 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="100">
-        <h3 class="text-xl font-semibold-inter text-orange-500 mb-4">Hourly Rate Model</h3>
-        <p class="text-lg text-[#1F323B]">
+      <div class="border border-orange-200 p-4 sm:p-6 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-lg sm:text-xl font-semibold text-orange-500 mb-3 sm:mb-4">Hourly Rate Model</h3>
+        <p class="text-base sm:text-lg text-[#1F323B] break-words">
           Set your own rate or use our smart suggestions based on your gear and experience.
           Offer bundle deals to boost bookings (e.g., <span class="font-semibold">3 hours for $110</span>).
         </p>
       </div>
 
       <!-- 模式 2：Pay-Per-Photo -->
-      <div class="border border-orange-200 p-6 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="text-xl font-semibold-inter text-orange-500 mb-4">Pay-Per-Photo Model</h3>
-        <p class="text-lg text-[#1F323B] mb-2">Clients pay only for the photos they love:</p>
-        <ul class="list-disc pl-5 text-[#1F323B] space-y-2">
+      <div class="border border-orange-200 p-4 sm:p-6 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-lg sm:text-xl font-semibold text-orange-500 mb-3 sm:mb-4">Pay-Per-Photo Model</h3>
+        <p class="text-base sm:text-lg text-[#1F323B] mb-2 break-words">Clients pay only for the photos they love:</p>
+        <ul class="list-disc pl-5 text-[#1F323B] space-y-2 text-base sm:text-lg">
           <li><strong>Base Fee:</strong> $30/session</li>
           <li><strong>Tier 1:</strong> $5/photo (10+ waives fee; 15+ drops to $4/photo)</li>
           <li><strong>Tier 2:</strong> $10/photo (5+ waives fee; 15+ drops to $8/photo)</li>
@@ -178,7 +179,7 @@
     </div>
   </div>
 
-  <button onclick="toggleModal()" class="mt-6 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold block mx-auto">
+  <button onclick="toggleModal()" class="mt-8 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold block mx-auto transform hover:scale-105 transition duration-300">
     Join Now
   </button>
 </section>
