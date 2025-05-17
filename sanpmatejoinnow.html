@@ -40,31 +40,33 @@
 
 <!-- 首页 -->
 <section
-  class="text-center py-20 sm:py-36 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat"
+  class="relative text-center py-20 sm:py-36 bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center justify-center"
   style="background-image: url('https://i.postimg.cc/pXrxVFQn/tim-mossholder-YAew-FXov-k-unsplash.jpg');"
 >
-  <div class="max-w-screen-md mx-auto">
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+  <div class="relative max-w-screen-md mx-auto px-4">
     <h1
-      class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold-inter leading-tight sm:leading-tight mb-6 break-words"
+      class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6"
       style="font-family: 'Inter', sans-serif;"
     >
       Build Your Photography Portfolio for Free
     </h1>
 
     <h2
-      class="text-white text-xl sm:text-2xl md:text-3xl font-bold-inter mb-10"
+      class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-10"
       style="font-family: 'Inter', sans-serif;"
     >
       Start Earning with <span class="text-orange-500">SnapMate</span>
     </h2>
 
     <button
-     onclick="toggleModal()" class="bg-orange-500 hover:bg-orange-600 text-white text-lg sm:text-xl px-10 sm:px-12 py-4 sm:py-5 rounded-full font-semibold"
+     onclick="toggleModal()" 
+     class="bg-orange-500 hover:bg-orange-600 text-white text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold transform hover:scale-105 transition duration-300"
     >
       Join Now
     </button>
 
-    <p class="mt-6 text-white text-base sm:text-lg">
+    <p class="mt-6 text-white text-sm sm:text-base">
       Join our waitlist for beta access!
     </p>
   </div>
@@ -73,8 +75,10 @@
 
 <!-- Why Become a SnapMate Photographer Section -->
 <section class="py-16 sm:py-20 bg-white">
-  <div class="text-center mb-8 sm:mb-10" data-aos="fade-up">
-    <h2 style="font-family: 'Inter', sans-serif;" class="text-3xl sm:text-4xl md:text-5xl font-bold-inter text-[#1F323B]">Why Become a <span class="text-orange-500">SnapMate</span> Photographer?</h2>
+  <div class="text-center mb-8 sm:mb-10 px-4" data-aos="fade-up">
+    <h2 style="font-family: 'Inter', sans-serif;" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F323B]">
+      Why Become a <span class="text-orange-500">SnapMate</span> Photographer?
+    </h2>
   </div>
 
 
@@ -182,98 +186,119 @@
 
 <!-- Three-Step Process -->
 <section style="font-family: 'Inter', sans-serif;" class="pt-6 pb-2 bg-white relative">
-  <h1 style="font-family: 'Inter', sans-serif;" class=" mt-10 text-6xl text-[#1F323B] text-center md:text-6xl font-extrabold-inter leading-relaxed tracking-wide">
+  <h1 style="font-family: 'Inter', sans-serif;" class="mt-10 text-2xl sm:text-4xl md:text-5xl text-[#1F323B] text-center font-extrabold leading-relaxed tracking-wide px-4">
     How it works
   </h1>
   <div class="mt-10 max-w-5xl mx-auto px-4 relative">
-    <!-- 中轴线 -->
-    <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-orange-500 -translate-x-1/2 z-0"></div>
+    <!-- 中轴线 - 在移动端隐藏 -->
+    <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-orange-500 -translate-x-1/2 z-0 hidden md:block"></div>
 
     <!-- Step 1 -->
-    <div class="relative mb-20 flex items-center">
-      <!-- 左侧文字 -->
-      <div class="w-1/2 pr-8 text-right" data-aos="fade-right">
-        <h3 class="text-2xl font-bold-inter text-[#1F323B]">Sign Up</h3>
-        <p class="text-lg text-gray-600 mt-2">Create your profile in minutes and tell us about your gear and style.</p>
-      </div>
-      <!-- 中间图标 -->
-      <div class="z-10 w-16 h-16 rounded-full border-4 border-orange-500 bg-white shadow-lg flex items-center justify-center text-xl font-bold text-orange-500 mx-4"
-           data-aos="zoom-in" data-aos-delay="100">
-        1
-      </div>
-      
-      <!-- 右边图片 -->
-      <div class="w-1/2 pl-8 flex justify-center" data-aos="fade-left">
-        <img src="https://i.postimg.cc/qBw6F7tJ/image2.png" alt="Step 1 Image"
-             class="w-32 h-32 rounded-full object-cover border-4 border-orange-200 shadow-md" />
+    <div class="relative mb-12 md:mb-20">
+      <div class="flex flex-col md:flex-row items-center md:items-start">
+        <!-- 移动端标题 -->
+        <div class="md:hidden text-center mb-4">
+          <h3 class="text-xl font-bold text-[#1F323B]">Sign Up</h3>
+        </div>
+        
+        <!-- 左侧文字 -->
+        <div class="w-full md:w-1/2 md:pr-8 text-center md:text-right order-2 md:order-1" data-aos="fade-right">
+          <h3 class="hidden md:block text-xl md:text-2xl font-bold text-[#1F323B]">Sign Up</h3>
+          <p class="text-base md:text-lg text-gray-600 mt-2">Create your profile in minutes and tell us about your gear and style.</p>
+        </div>
+
+        <!-- 中间图标 -->
+        <div class="z-10 w-12 h-12 md:w-16 md:h-16 rounded-full border-4 border-orange-500 bg-white shadow-lg flex items-center justify-center text-lg md:text-xl font-bold text-orange-500 mx-auto md:mx-4 mb-4 md:mb-0 order-1 md:order-2"
+             data-aos="zoom-in" data-aos-delay="100">
+          1
+        </div>
+        
+        <!-- 右边图片 -->
+        <div class="w-full md:w-1/2 md:pl-8 flex justify-center order-3" data-aos="fade-left">
+          <img src="https://i.postimg.cc/qBw6F7tJ/image2.png" alt="Step 1 Image"
+               class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-orange-200 shadow-md" />
+        </div>
       </div>
     </div>
 
     <!-- Step 2 -->
-    <div class="relative mb-20 flex items-center">
+    <div class="relative mb-12 md:mb-20">
+      <div class="flex flex-col md:flex-row items-center md:items-start">
+        <!-- 移动端标题 -->
+        <div class="md:hidden text-center mb-4">
+          <h3 class="text-xl font-bold text-[#1F323B]">Build Portfolio</h3>
+        </div>
 
-      <!-- 左边图片 -->
-      <div class="w-1/2 pl-8 flex justify-center" data-aos="fade-left">
-        <img src="https://i.postimg.cc/Gp3SRtLc/image3.png" alt="Step 1 Image"
-             class="w-32 h-32 rounded-full object-cover border-4 border-orange-200 shadow-md" />
-      </div>
-      <!-- 中间图标 -->
-      <div class="z-10 w-16 h-16 rounded-full border-4 border-orange-500 bg-white shadow-lg flex items-center justify-center text-xl font-bold text-orange-500 mx-4"
-           data-aos="zoom-in" data-aos-delay="200">
-        2
-      </div>
-      <!-- 右侧文字 -->
-      <div class="w-1/2 pl-8 text-left" data-aos="fade-left">
-        <h3 class="text-2xl font-bold-inter text-[#1F323B]">Build Portfolio</h3>
-        <p class="text-lg text-gray-600 mt-2">Upload your favorite shots. Show off your personality, not just your camera.</p>
+        <!-- 左边图片 -->
+        <div class="w-full md:w-1/2 flex justify-center order-2 md:order-1" data-aos="fade-right">
+          <img src="https://i.postimg.cc/Gp3SRtLc/image3.png" alt="Step 2 Image"
+               class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-orange-200 shadow-md" />
+        </div>
+
+        <!-- 中间图标 -->
+        <div class="z-10 w-12 h-12 md:w-16 md:h-16 rounded-full border-4 border-orange-500 bg-white shadow-lg flex items-center justify-center text-lg md:text-xl font-bold text-orange-500 mx-auto md:mx-4 mb-4 md:mb-0 order-1 md:order-2"
+             data-aos="zoom-in" data-aos-delay="200">
+          2
+        </div>
+
+        <!-- 右侧文字 -->
+        <div class="w-full md:w-1/2 md:pl-8 text-center md:text-left order-3" data-aos="fade-left">
+          <h3 class="hidden md:block text-xl md:text-2xl font-bold text-[#1F323B]">Build Portfolio</h3>
+          <p class="text-base md:text-lg text-gray-600 mt-2">Upload your favorite shots. Show off your personality, not just your camera.</p>
+        </div>
       </div>
     </div>
 
     <!-- Step 3 -->
-    <div class="relative mb-20 flex items-center">
-      <!-- 左侧文字 -->
-      <div class="w-1/2 pr-8 text-right" data-aos="fade-right">
-        <h3 class="text-2xl font-bold-inter text-[#1F323B]">Start Earning</h3>
-        <p class="text-lg text-gray-600 mt-2">Get booked, shoot, deliver photos, and get paid—flexibly and easily.</p>
-      </div>
-      <!-- 中间图标 -->
-      <div class="z-10 w-16 h-16 rounded-full border-4 border-orange-500 bg-white shadow-lg flex items-center justify-center text-xl font-bold text-orange-500 mx-4"
-           data-aos="zoom-in" data-aos-delay="300">
-        3
-      </div>
-      <!-- 右边图片 -->
-      <div class="w-1/2 pl-8 flex justify-center" data-aos="fade-left">
-        <img src="https://i.postimg.cc/QN93W4pp/image4.png" alt="Step 1 Image"
-             class="w-32 h-32 rounded-full object-cover border-4 border-orange-200 shadow-md" />
+    <div class="relative mb-12 md:mb-20">
+      <div class="flex flex-col md:flex-row items-center md:items-start">
+        <!-- 移动端标题 -->
+        <div class="md:hidden text-center mb-4">
+          <h3 class="text-xl font-bold text-[#1F323B]">Start Earning</h3>
+        </div>
+
+        <!-- 左侧文字 -->
+        <div class="w-full md:w-1/2 md:pr-8 text-center md:text-right order-2 md:order-1" data-aos="fade-right">
+          <h3 class="hidden md:block text-xl md:text-2xl font-bold text-[#1F323B]">Start Earning</h3>
+          <p class="text-base md:text-lg text-gray-600 mt-2">Get booked, shoot, deliver photos, and get paid—flexibly and easily.</p>
+        </div>
+
+        <!-- 中间图标 -->
+        <div class="z-10 w-12 h-12 md:w-16 md:h-16 rounded-full border-4 border-orange-500 bg-white shadow-lg flex items-center justify-center text-lg md:text-xl font-bold text-orange-500 mx-auto md:mx-4 mb-4 md:mb-0 order-1 md:order-2"
+             data-aos="zoom-in" data-aos-delay="300">
+          3
+        </div>
+
+        <!-- 右边图片 -->
+        <div class="w-full md:w-1/2 md:pl-8 flex justify-center order-3" data-aos="fade-left">
+          <img src="https://i.postimg.cc/QN93W4pp/image4.png" alt="Step 3 Image"
+               class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-orange-200 shadow-md" />
+        </div>
       </div>
     </div>
 
     <!-- 附加模块：总结性内容 -->
-    <div class="relative mb-20 flex items-center justify-between max-w-5xl mx-auto px-4">
-
-      <!-- 左侧圆形 Join Now 按钮 -->
-      <div class="w-1/2 pl-8 flex justify-center items-center" data-aos="fade-left">
-        <button onclick="toggleModal()" class="w-36 h-36 rounded-full bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold shadow-md flex items-center justify-center transition duration-300">
+    <div class="relative flex flex-col md:flex-row items-center justify-center md:justify-between max-w-5xl mx-auto px-4 mb-12 md:mb-20">
+      <!-- Join Now 按钮 -->
+      <div class="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0" data-aos="fade-right">
+        <button onclick="toggleModal()" class="w-32 h-32 md:w-36 md:h-36 rounded-full bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold shadow-md flex items-center justify-center transition duration-300 transform hover:scale-105">
           Join Now
         </button>
       </div>
 
-      <!-- 中间编号（可改成图标） -->
-      <div class="z-10 w-16 h-16 rounded-full border-4 border-orange-500 bg-white shadow-lg flex items-center justify-center text-xl font-bold text-orange-500 mx-4"
-          data-aos="zoom-in" data-aos-delay="100">
+      <!-- 中间图标 -->
+      <div class="z-10 w-12 h-12 md:w-16 md:h-16 rounded-full border-4 border-orange-500 bg-white shadow-lg flex items-center justify-center text-lg md:text-xl font-bold text-orange-500 mx-auto md:mx-4 mb-8 md:mb-0"
+           data-aos="zoom-in" data-aos-delay="100">
         📸
       </div>
 
       <!-- 右侧文字 -->
-      <div class="w-1/2 pl-8 text-left" data-aos="fade-left">
-        <h3 class="text-2xl font-bold-inter text-[#1F323B]">Join Thousands of Creators</h3>
-        <p class="text-gray-600 mt-2">SnapMate has helped thousands of photographers turn their passion into profit. You can be next.</p>
+      <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
+        <h3 class="text-xl md:text-2xl font-bold text-[#1F323B] mb-2">Join Thousands of Creators</h3>
+        <p class="text-base text-gray-600">SnapMate has helped thousands of photographers turn their passion into profit. You can be next.</p>
       </div>
     </div>
-
   </div>
-
-  
 </section>
 
 <!--portflio 部分-->
